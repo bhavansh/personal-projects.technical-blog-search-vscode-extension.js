@@ -1,0 +1,43 @@
+{
+	"name": "technical-blog-search",
+	"displayName": "Technical Blog Search",
+	"publisher": "BhavanshGupta",
+	"description": "This extension contains a list of Technical Blogs to help you in your Programming Journey",
+	"version": "0.0.1",
+	"icon": "logo.png",
+	"engines": {
+		"vscode": "^1.53.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:technical-blog-search.searchTechBlog"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "technical-blog-search.searchTechBlog",
+				"title": "Search Technical Blog",
+				"category": "Blog Search"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.53.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.19.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	}
+}
